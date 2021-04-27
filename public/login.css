@@ -1,0 +1,19 @@
+*{
+    text-align: center;
+    margin:0%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+.headings{
+    color:rgb(240, 102, 102)
+}
+
+.form-login{
+    margin-left: 500px;
+    margin-top: 80px;
+    height: 200px;
+    width:400px;
+    box-sizing: border-box;
+    border: 2px solid  teal ;
+    padding: 70px;
+}

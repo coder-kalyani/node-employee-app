@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="/dashboard.css">
+<div class="refs">
+    <table class="empTab">
+        <tr>
+            <th>Employee Id</th>
+            <th>Employee Name</th>
+            <th>Employee Email Id</th>
+            <th>Employee Department</th>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+
+        <% employeeData.map((res)=>{%>
+            <tr>
+                <td>
+                    <%=res._id%>
+                </td>
+                <td>
+                    <%=res.name%>
+                </td>
+                <td>
+                    <%=res.email%>
+                </td>
+                <td>
+                    <%=res.department%>
+                </td>
+            </tr>
+            <%})%>
+    </table>
+    <a href="/dashboard"> Back to Dashboard</a>
+</div>

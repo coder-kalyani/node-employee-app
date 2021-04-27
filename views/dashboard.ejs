@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="/dashboard.css">
+<div class="dashboard">
+    <div class="header">
+        <h1>Welcome to dashboard</h1>
+        <div class="nav">
+            <form action="/search" method="POST">
+                <select name="searchIp" class="searchIp" required placeholder="Enter your Department Name">--Select--
+                    <option value="">-- Select Search By --</option>
+                    <option value="id">Employee Id</option>
+                    <option value="name">Name</option>
+                    <option value="email">Email Id</option>
+                    <option value="department">Department</option>
+                </select>
+                <input type="text" required class="searchIp" name="searchText" placeholder="Search Here" />
+                <button type="submit" name='search'>Search</button>
+
+            </form>
+            <button id="profileBtn"><a href="/profile">My Profile</a></button>
+            <button id="logoutBtn"><a href="/login">Log out</a></button>
+        </div>
+    </div>
+    <br />
+    <h2 id="txt">Employee List</h2>
+    <div class="refs">
+        <table class="empTab">
+            <tr>
+                <th>Employee Id</th>
+                <th>Employee Name</th>
+                <th>Employee Email Id</th>
+                <th>Employee Department</th>
+            </tr>
+            <tr>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+
+            <% employeeData.map((res)=>{%>
+                <tr>
+                    <td>
+                        <%=res._id%>
+                    </td>
+                    <td>
+                        <%=res.name%>
+                    </td>
+                    <td>
+                        <%=res.email%>
+                    </td>
+                    <td>
+                        <%=res.department%>
+                    </td>
+                </tr>
+                <%})%>
+        </table>
+    </div>
+</div>
